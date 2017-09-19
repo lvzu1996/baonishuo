@@ -1,0 +1,87 @@
+/**index.wxss**/
+html,body {
+height: 100%;
+margin: 0;
+padding: 0;
+}
+.index-container{
+  width: 100%;
+  height: 100%;
+  background: #e9e9e9;
+}
+.index-container .send-red-packet{
+  position: absolute;
+  top: 100rpx;
+  left: 0;
+  right: 0;
+  width: 680rpx;
+  height: 730rpx;
+  background: white;
+  margin: auto;
+  box-shadow: 2rpx 4rpx 2rpx 2rpx #afafaf;
+}
+.index-container .send-red-packet .warning{
+  color: white;
+  position: absolute;
+  top: 90rpx;
+  width: 84%;
+  height: 44rpx;
+  line-height: 44rpx;
+  font-size: 22rpx;
+  text-align: center;
+  margin: auto;
+  left: 0;
+  right: 0;
+  background-color: #e25d55;
+}
+.index-container .send-red-packet .userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: -64rpx;
+  margin: auto;
+  left: 0;
+  right: 0;
+  border: 8rpx solid white;
+}
+.index-container .send-red-packet .input-div{
+  width: 84%;
+  height: 80%;
+  margin: 0 auto;
+  padding-top: 140rpx;
+  display: flex;
+  flex-direction: column;
+}
+.index-container .send-red-packet .input-div button{
+  margin-top: 50rpx;
+  background-color: #e25d55;
+}
+.index-container .send-red-packet .input-div .section{
+  font-size: 30rpx;
+  width: 100%;
+  margin: 10rpx;
+  height: 80rpx;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.index-container .send-red-packet .input-div .section input{
+  border-bottom: 1rpx solid #d0d0d0;
+  width: 340rpx;
+}
+.index-container .send-red-packet .input-div .section image{
+  margin-left: 20rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+.index-container .send-red-packet .input-div  .tips{
+  text-align: center;
+  font-size: 25rpx;
+  color: #acacac;
+}
+.index-container .send-red-packet .input-div .section .title{
+  margin-right: 30rpx;
+  width: 180rpx;
+}

@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/tixian/tixian",
+    "pages/question/question"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#e25d55",
+    "navigationBarTitleText": "包你飙",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+    "borderStyle":"white",
+    "selectedColor":"#294057",
+    "list":[
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"./img/index.png",
+        "selectedIconPath":"./img/index_on.png"
+      },
+      {
+        "pagePath": "pages/tixian/tixian",
+        "text": "提现",
+        "iconPath":"./img/publish.png",
+        "selectedIconPath":"./img/publish_on.png"
+      },
+      {
+        "pagePath": "pages/question/question",
+        "text": "问题",
+        "iconPath":"./img/me.png",
+        "selectedIconPath":"./img/me_on.png"
+      }
+    ]
+  }
+}

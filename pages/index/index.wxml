@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="index-container">
+  <view class="send-red-packet">
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </view>
+    <view class="warning" wx:if="{{warningShow}}">{{warning}}</view>
+    <view class="input-div">
+      <view class="section" wx:for="{{red_packet_input}}" wx:key="unique" >
+        <text class="title">{{item.menu_name}}</text>
+        <input placeholder-style="color:#bbbbbb" id="{{item.id}}" placeholder="{{item.placeholder}}" type="{{item.input_type}}" confirm-type="{{item.confirm_type}}" bindinput="bindKeyInput" maxlength="{{item.maxlength}}"/>
+        <text class="tips">{{item.tips}}</text>
+         <image src="{{item.tips_src}}" bindtap="how_to_use"></image>
+      </view>
+      <text class="tips">需支付¥{{charge_money}}服务费，优先使用余额¥{{balance}}</text>
+      <button type="warn" size="default" bindtap="build_red_packet">{{build_buttonValue}}</button>
+    </view>
+  </view>
+</view>
