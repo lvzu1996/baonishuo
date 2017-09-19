@@ -4,7 +4,9 @@
     "pages/logs/logs",
     "pages/tixian/tixian",
     "pages/question/question",
-    "pages/hongbao/hongbao"
+    "pages/hongbao/hongbao",
+    "pages/myrecord/myrecord",
+    "pages/problems/problems"
   ],
   "window":{
     "backgroundTextStyle":"light",

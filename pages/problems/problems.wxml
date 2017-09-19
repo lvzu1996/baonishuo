@@ -1,0 +1,20 @@
+<!--problems.wxml-->
+<view class="problems">
+  <view  wx:for="{{problems}}" wx:for-index="idx" wx:key="{{idx}}" class="problems-wrap">
+    <view class="fengeline" wx:if="{{problems[idx].flag}}"></view>
+    <view class="{{problems[idx].flag ? 'problems-item-extend':'problems-item-flod'}}">
+
+      <view class="problems-title" id="{{idx}}" bindtap="bindExplainTap">
+        <text class="questions">{{item.title}}</text>
+        <image class="liebiaoicon" src="{{problems[idx].flag?itemicon_press:itemicon}}"></image>
+      </view>
+      <view class="problems-explain" wx:if="{{problems[idx].flag}}">
+        <text>{{item.explain}}</text>
+      </view>
+    </view>
+  </view>
+  <button class="contactkefu" type="primary" size="{{primarySize}}" open-type="contact">
+    <image class="contacticon" src="{{contacticon}}"></image>
+    联系在线客服
+  </button>
+</view>
