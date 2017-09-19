@@ -48,7 +48,7 @@
           src="./resource/voice.svg"
           mode='scaleToFill'
           ></image>
-          <view class="ope-str">发口令</view>
+          <view class="ope-str">发红包</view>
         </view>
 
         <view class="ope-single" bindtap="goTransmit">

@@ -2,7 +2,6 @@
   position: absolute;
   color: #fff;
 }
-
 .receive-container{
   width: 100%;
 }
@@ -49,7 +48,7 @@
 }
 
 #rec-button{
-  margin-top: 70rpx;
+  margin-top: 45rpx;
   font-size: 33rpx;
   color: #fff;
   width: 75%;

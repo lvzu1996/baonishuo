@@ -1,6 +1,7 @@
 {
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#e24747",
+    "navigationBarBackgroundColor": "#e25d55",
     "navigationBarTitleText": "包你飚-余额提现",
-    "navigationBarTextStyle":"#fff"
+    "navigationBarTextStyle":"#fff",
+    "navigationBarTextStyle":"white"
 }
