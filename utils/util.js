@@ -16,6 +16,11 @@ function formatNumber(n) {
   return n[1] ? n : '0' + n
 }
 
+function formatMoney(money){
+   money=money.toFixed(2);
+   return (money || 0).toString().replace(/(\d)(?=(?:\d{3})+$)/g, '$1,');
+}
+
 function getWindowH(){
   var windowH
   wx.getSystemInfo({
@@ -26,8 +31,8 @@ function getWindowH(){
   return windowH
 }
 
-
 module.exports = {
   formatTime: formatTime,
-  getWindowH: getWindowH,
+  formatMoney:formatMoney,
+  getWindowH:getWindowH
 }

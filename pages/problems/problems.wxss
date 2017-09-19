@@ -1,0 +1,60 @@
+/* problems.wxss */
+
+page {
+  height: 100%;
+  background-color: #f6f6f6;
+}
+.problems-wrap{
+  position: relative;
+}
+.fengeline{
+  height: 2rpx;
+  width: 100%;
+  background-color: #f6f6f6;
+  top:90rpx;
+  position: absolute;
+}
+.problems {
+  background-color: #f6f6f6;
+  height: 100%;
+  padding: 40rpx 30rpx;
+}
+.problems .problems-explain{
+  padding: 20rpx 16rpx 0  16rpx;
+  word-wrap:break-word;
+  color: #000;
+}
+
+.problems .problems-item-flod{
+  background-color: #ffffff;
+  margin-bottom: 24rpx;
+  padding: 20rpx;
+}
+.problems .problems-item-extend{
+  background-color: #ffffff;
+  margin-bottom: 24rpx;
+  padding: 20rpx;
+  color:#bfbfbf;
+}
+.problems .problems-title{
+  display: flex;
+  align-items: center;
+  text-align: left;
+  height: 100%;
+}
+.problems .problems-item-extend .problems-title{
+  margin-bottom: 20rpx;
+}
+.problems .questions{
+  flex: 2;
+}
+.liebiaoicon {
+  height: 50rpx;
+  width: 50rpx;
+}
+.contacticon{
+  height: 50rpx;
+  width: 50rpx;
+  position: relative;
+  top: 12rpx;
+}

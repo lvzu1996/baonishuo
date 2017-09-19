@@ -1,0 +1,48 @@
+<!--myrecord.wxml-->
+<view class="myrecord">
+  <view class="record-nav">
+    <text bindtap="bindFachuTap" class="{{current===0?'on':null}}">我发出的</text>
+    <text bindtap="bindShoudaoTap" class="{{current===1?'on':null}}">我收到的</text>
+  </view>
+  <swiper current="{{current}}" bindchange="bindCurrentChange">
+    <swiper-item data-id="fachu">
+      <view class="record-detail">
+        <view class="userinfo">
+          <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+          <text class="userinfo-nickname">{{userInfo.nickName}}<text>发出的</text></text>
+        </view>
+        <view class="redpaper-info">
+          <view class="money">
+            <text style="font-size:16px">金额(元)</text>
+            <text>{{shoudao_redmoney}}</text>
+          </view>
+          <view class="numbers">
+            <text style="font-size:16px">数量(个)</text>
+            <text>{{shoudao_rednumber}}</text>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item data-id="shoudao">
+      <view class="record-detail">
+        <view class="userinfo">
+          <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+          <text class="userinfo-nickname">{{userInfo.nickName}}<text>收到的</text></text>
+        </view>
+        <view class="redpaper-info">
+          <view class="money">
+            <text style="font-size:16px">金额(元)</text>
+            <text>{{fachu_redmoney}}</text>
+          </view>
+          <view class="numbers">
+            <text style="font-size:16px">数量(个)</text>
+            <text>{{fachu_rednumber}}</text>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+  <view class="footer-problems">
+    <text bindtap="bindProblemTap">常见问题</text>
+  </view>
+</view>

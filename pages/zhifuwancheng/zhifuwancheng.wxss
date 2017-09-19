@@ -1,0 +1,58 @@
+
+/**index.wxss**/
+.zfwc {
+  width:100%;
+  height: 1110rpx;
+  box-sizing: border-box;
+  background-color:rgb(226, 71, 71);
+  padding:20px;
+  
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 8rpx;
+}
+
+.userinfo-nickname {
+  color: rgb(218, 179, 93);
+  font-size:36rpx;
+}
+.kouling{
+    color: rgb(218, 179, 93);
+    font-size:44rpx;
+}
+.kai{
+    width:200rpx;
+    height:200rpx;
+    line-height:200rpx;
+    border-radius:50%;
+    margin-top:40rpx;
+}
+.zhuanfa{
+    margin-top:40rpx;
+    width:100%;
+    background-color:#fff;
+    border-radius:8rpx;
+}
+.btn{
+    padding:40rpx 20rpx;
+}
+button{
+    margin-top:20rpx;
+}
+.shiyishi{
+    width:100%;
+    text-align:center;
+    padding:20rpx 0;
+    font-size:28rpx;
+    color:#133b50;
+}
