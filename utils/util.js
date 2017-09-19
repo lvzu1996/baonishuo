@@ -16,6 +16,18 @@ function formatNumber(n) {
   return n[1] ? n : '0' + n
 }
 
+function getWindowH(){
+  var windowH
+  wx.getSystemInfo({
+    success: function(res) {
+      windowH = res.windowHeight
+    }
+  })
+  return windowH
+}
+
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  getWindowH: getWindowH,
 }

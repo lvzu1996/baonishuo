@@ -46,42 +46,45 @@ Page({
   },
   //事件处理函数
   build_red_packet: function() {
-    const t = this
-    //将时间戳从number转成string
-    // let timestamp = (Date.parse(new Date())/1000).toString();
-    //调起微信支付
-    wx.requestPayment({
-      //均从后台获取
-      'timeStamp': '',
-      'nonceStr': '',
-      'package': '',
-      'signType': 'MD5',
-      'paySign': '',
-      'success':function(res){
-        wx.showToast({
-            title: '支付成功',
-            icon: 'success',
-            duration: 2000
-        })
-      },
-      'fail':function(res){},
-      'complete':function(res){}
+    wx.navigateTo({
+      url: '../hongbao/hongbao'
     })
-    //点击支付前需判断是否符合支付条件
-    let pre_money = Number(t.data.inputValue_je)/Number(t.data.inputValue_sl)
-    if(pre_money>=1 && t.data.inputValue_je<=10){
-      t.setData({
-        warning:''
-      })
-    }
-    if(this.data.warning.length>0) {
-      wx.showModal({
-        title: '提示',
-        content: this.data.warning,
-        showCancel: false,
-      })
-    }
-    console.log(this.data);
+    // const t = this
+    // //将时间戳从number转成string
+    // // let timestamp = (Date.parse(new Date())/1000).toString();
+    // //调起微信支付
+    // wx.requestPayment({
+    //   //均从后台获取
+    //   'timeStamp': '',
+    //   'nonceStr': '',
+    //   'package': '',
+    //   'signType': 'MD5',
+    //   'paySign': '',
+    //   'success':function(res){
+    //     wx.showToast({
+    //         title: '支付成功',
+    //         icon: 'success',
+    //         duration: 2000
+    //     })
+    //   },
+    //   'fail':function(res){},
+    //   'complete':function(res){}
+    // })
+    // //点击支付前需判断是否符合支付条件
+    // let pre_money = Number(t.data.inputValue_je)/Number(t.data.inputValue_sl)
+    // if(pre_money>=1 && t.data.inputValue_je<=10){
+    //   t.setData({
+    //     warning:''
+    //   })
+    // }
+    // if(this.data.warning.length>0) {
+    //   wx.showModal({
+    //     title: '提示',
+    //     content: this.data.warning,
+    //     showCancel: false,
+    //   })
+    // }
+    // console.log(this.data);
   },
   how_to_use: function() {
     console.log('how to use');
