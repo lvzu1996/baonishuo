@@ -3,7 +3,6 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/tixian/tixian",
-    "pages/question/question",
     "pages/hongbao/hongbao",
     "pages/myrecord/myrecord",
     "pages/problems/problems"
@@ -31,7 +30,7 @@
         "selectedIconPath":"./tabBar_img/publish_on.png"
       },
       {
-        "pagePath": "pages/question/question",
+        "pagePath": "pages/problems/problems",
         "text": "问题",
         "iconPath":"./tabBar_img/me.png",
         "selectedIconPath":"./tabBar_img/me_on.png"
