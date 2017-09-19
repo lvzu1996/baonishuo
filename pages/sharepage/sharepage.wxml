@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="wrap">
+    <view class="share">
+        <view class="userinfo">
+            <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+            <text class="userinfo-nickname">{{userInfo.nickName}}发了一个语音口令</text>
+            <text class="kouling">谢谢老板</text>
+        </view>
+        <!--这里放的是二维码,现在还没有秘钥,所以我先用一个按钮代替-->
+        <button type="default" class="kai">吕智兵页面的二维码</button>
+            <!--这里放置这个小程序的二维码-->
+        <view class="sbewm">
+            <button type="default" class="sbewm-btn">识别小程序二维码</button>
+            <text class="sbewm-cn">长按识别小程序</text>
+        </view>
+    </view>
+</view>

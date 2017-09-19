@@ -1,0 +1,84 @@
+.yetx{
+    position:relative;
+    padding:40rpx;
+    height:1030rpx;
+    background-color:#eee;
+}
+.wrap{
+    background-color:#fff;
+}
+.yetx-jubao{
+    position:absolute;
+    right:40rpx;
+    color:#133b50;
+    font-size:28rpx;
+    line-height:56rpx;
+}
+.yetx-content {
+    margin-top:80rpx;
+}
+.user-ye{
+    height:120rpx;
+    line-height:120rpx;
+    background-color:#f4f5f9;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    padding:0 40rpx;
+    font-size:28rpx;
+    color:#222;
+}
+.yu-e{
+    font-size:40rpx;
+    color:#666;
+    padding-left:80rpx;
+}
+.tixian{
+    position:relative;
+    padding:40rpx;
+    font-size:28rpx;
+    color:#222;
+}
+.tx-fh{
+    position:absolute;
+    left:40rpx;
+    top:80rpx;
+    height:120rpx;
+    line-height:120rpx;
+    font-size:60rpx;
+}
+#jin-e{
+
+    width:70%;
+    height:120rpx;
+    font-size:120rpx;
+    padding-left:60rpx;
+}
+.line{
+    height:2rpx;
+    width:100%;
+    background-color:#ccc;
+}
+.all-tixian{
+    padding:0 40rpx;
+    font-size:28rpx;
+    color:#666;
+}
+.all{
+    color:#133b50;
+}
+.daozhang{
+    width:100%;
+    padding:20rpx 0;
+    text-align:center;
+    font-size:24rpx;
+    color:#666;
+}
+.cjwt{
+    position:absolute;
+    width:90%;
+    bottom:100rpx;
+    text-align:center;
+    font-size:28rpx;
+    color:#133b50;
+}

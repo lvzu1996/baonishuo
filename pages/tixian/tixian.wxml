@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="yetx">
+    <view class="yetx-jubao" bindtap="jubao">举报</view>
+    <view class="wrap">
+        <view class="yetx-content">
+            <view class="user-ye">
+                <view>账户余额:</view><text class="yu-e">{{yu_e}}元</text>
+            </view>
+            <view class="tixian">
+                <view >提现金额</view>
+                <text class="tx-fh">￥</text>
+                <input
+                    value="{{ti_xian_jin_e}}"
+                    type="text"
+                    id="jin-e"
+                    cursor="20"
+                    bindinput="getValue"
+                    auto-focus
+                    />
+                <view class="line"></view>
+            </view>
+            <view class="all-tixian">
+                提现到微信红包,<text class="all" bindtap="qubutixian">全部提现</text>
+            </view>
+            <button style="margin:20px 20px 0"
+                size="default"
+                type="primary"
+                form-type=""
+                hover-class=""
+                bindtap="tixian">
+                提现
+            </button>
+            <view class="daozhang">1-5个工作日到账</view>
+        </view>
+    </view>
+    <view class="cjwt" bindtap="changjianwenti">常见问题</view>
+</view>
