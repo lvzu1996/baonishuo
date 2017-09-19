@@ -24,7 +24,7 @@ Page({
         confirm_type:'next',
         maxlength:8,
         tips:'小伙伴们说对口令即可获得随机红包 ',
-        tips_src:'../../img/问号.png'
+        tips_src:'./img/问号.png'
       },
       {
         menu_name:'金额（元）',

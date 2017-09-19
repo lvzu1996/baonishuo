@@ -18,20 +18,20 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath":"./img/index.png",
-        "selectedIconPath":"./img/index_on.png"
+        "iconPath":"./tabBar_img/index.png",
+        "selectedIconPath":"./tabBar_img/index_on.png"
       },
       {
         "pagePath": "pages/tixian/tixian",
         "text": "提现",
-        "iconPath":"./img/publish.png",
-        "selectedIconPath":"./img/publish_on.png"
+        "iconPath":"./tabBar_img/publish.png",
+        "selectedIconPath":"./tabBar_img/publish_on.png"
       },
       {
         "pagePath": "pages/question/question",
         "text": "问题",
-        "iconPath":"./img/me.png",
-        "selectedIconPath":"./img/me_on.png"
+        "iconPath":"./tabBar_img/me.png",
+        "selectedIconPath":"./tabBar_img/me_on.png"
       }
     ]
   }
