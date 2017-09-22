@@ -17,7 +17,7 @@ function formatNumber(n) {
 
 function formatMoney(money){
    money=money.toFixed(2);
-   return (money || 0).toString().replace(/(\d)(?=(?:\d{3})+$)/g, '$1,');
+   return (money || 0).toString().replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
 }
 
 function getWindowH(){
@@ -30,8 +30,20 @@ function getWindowH(){
   return windowH
 }
 
+function getWindowW() {
+  var windowW
+  wx.getSystemInfo({
+    success: function(res) {
+      windowW = res.windowWidth
+    }
+  })
+  return windowW
+}
+
+
 module.exports = {
   formatTime: formatTime,
   formatMoney:formatMoney,
-  getWindowH:getWindowH
+  getWindowH:getWindowH,
+  getWindowW:getWindowW,
 }

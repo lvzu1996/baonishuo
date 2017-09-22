@@ -1,14 +1,14 @@
-<view class="receive-container">
-
+<view class="receive-container" wx:if="{{ !jubao_div_if }}">
+  
   <view class="receive-main" style="width:100%;height:{{mainH}}">
 
       <image id="headpic-img"
-        src="{{userInfo.headpicUrl}}"
+        src="{{userInfo.avatarUrl}}"
         mode='scaleToFill'
         lazy-load=true
       ></image>
-
-      <view id="username">{{userInfo.name}}</view>
+      
+      <view id="username">{{userInfo.nickName}}</view>
 
       <view class="rp-content">
         <image id="sing-img"
@@ -16,7 +16,7 @@
         mode='scaleToFill'
         lazy-load=true
         ></image>
-        <view id="sing-str">{{singStr}}</view>
+        <view id="sing-str">{{content}}</view>
       </view>
 
       <button id="rec-button"
@@ -25,7 +25,10 @@
       size="default"
       disabled="false"
       bindtouchstart="startRec"
-      bindtouchend="stopRec">按住说出以上口令领取赏金</button>
+      bindtouchmove="stopRec"
+      bindtouchend="stopRec"
+      >{{buttonStr}}</button>
+      <!-- bindtap="hint" -->
 
       <button id="rec-button-over"
       wx:if="{{ !rpdetail.flag }}"
@@ -35,20 +38,21 @@
       >赏金都被领完了</button>
 
       <view class="rev-operation">
-        <view class="ope-single" bindtap="getMoney">
-          <image class="ope-img"
-          src="./resource/money.svg"
-          mode='scaleToFill'
-          ></image>
-          <view class="ope-str">去提现</view>
-        </view>
-
+        
         <view class="ope-single" bindtap="giveRedPorcket">
           <image class="ope-img"
           src="./resource/voice.svg"
           mode='scaleToFill'
           ></image>
           <view class="ope-str">发红包</view>
+        </view>
+
+        <view class="ope-single" bindtap="getMoney">
+          <image class="ope-img"
+          src="./resource/money.svg"
+          mode='scaleToFill'
+          ></image>
+          <view class="ope-str">去提现</view>
         </view>
 
         <view class="ope-single" bindtap="goTransmit">
@@ -60,24 +64,32 @@
         </view>
 
       </view>
+      
+      <view id="rec-ope-jubao" bindtap="_jubao">举报</view>
+      
+      
   </view>
 
   <view class="receiveInfo">
     <view class="info-header">
-      <view id="rec-acount">共{{rpdetail.amountMoney}}元领取{{rpdetail.receiveAcount}}/{{rpdetail.amountNum}}个</view>
+      <view id="rec-acount">共{{rpdetail.amountMoney}}元领取{{rpdetail.receiveNum}}/{{rpdetail.amountNum}}个</view>
       <view id='rec-jubao'>举报</view>
     </view>
 
-    <view class="receive-peoples">
+    <view class="receive-peoples" wx:if="{{userList}}">
       <view class="receive-single-person" wx:for="{{userList}}" wx:key="unique" wx:for-index='index'>
         <view class="rsp-left">
-          <image class="rsp-headpic" src="{{item.headpicUrl}}"></image>
+          <image class="rsp-headpic" src="{{item.avatarUrl}}"></image>
           <view class="rsp-name-voice">
             <view class="rsp-name-gender">
-              <view class="rsp-name">{{item.name}}</view>
+              <view class="rsp-name">{{item.nickName}}</view>
               <image class="rsp-gender" wx:if="{{item.gender==1}}" src="./resource/man.svg"></image>
               <image class="rsp-gender" wx:else src="./resource/women.svg"></image>
             </view>
+            
+            <audio src="{{audioSrc}}" bindtap="test" id="testAudio">
+            </audio>
+            
             <view class="rsp-voice" bindtap="playMusic" data-id="{{index}}">
               <view class="rsp-voice-str" wx:if="{{voiceFlags[index]}}">播放中</view>
               <view class="rsp-voice-str" wx:else>{{item.voiceTime}}''</view>
@@ -90,10 +102,21 @@
           <view class="rsp-money">{{item.money}}元</view>
           <view class="rsp-date">{{item.date}}</view>
         </view>
-
+        
       </view>
-
     </view>
-
+    
+    <view wx:else class="recieve-none">
+      <view class="revieve-none-str">
+        未领取的金额，将于24小时后退回原账户余额
+      </view>
+      
+    </view>
+    
   </view>
+</view>
+
+<view class="jubao-div" style="width:{{windowW}};height:{{windowH}};" wx:if="{{jubao_div_if}}" animation="{{animationData}}">
+      <view wx:for="jubaoList" wx:key="unique" class="jubao-single-div">{{jubaoList[index]}}</view>
+      <image id="cancel-img" src="./resource/cancel.svg" bindtap="_cancelJubao"></image>
 </view>

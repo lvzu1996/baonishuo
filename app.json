@@ -5,12 +5,14 @@
     "pages/hongbao/hongbao",
     "pages/myrecord/myrecord",
     "pages/problems/problems",
-    "pages/zhifuwancheng/zhifuwancheng"
+    "pages/zhifuwancheng/zhifuwancheng",
+    "pages/sharepage/sharepage",
+    "pages/moreabouttype/moreabouttype"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#e25d55",
-    "navigationBarTitleText": "包你飙",
+    "navigationBarTitleText": "包你彪",
     "navigationBarTextStyle":"white"
   },
   "tabBar":{
@@ -30,8 +32,8 @@
         "selectedIconPath":"./tabBar_img/publish_on.png"
       },
       {
-        "pagePath": "pages/problems/problems",
-        "text": "问题",
+        "pagePath": "pages/hongbao/hongbao",
+        "text": "红包",
         "iconPath":"./tabBar_img/me.png",
         "selectedIconPath":"./tabBar_img/me_on.png"
       }
